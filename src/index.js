@@ -17,31 +17,47 @@ import './home-style.css';
 
 // import { homePage } from "./home";
 const homePage = (() => {
-    
+    let section
     const sectionElement = ()=> {
-        const section = createElement('section');
+        section = createElement('section');
         section.classList.add('main-container');
         section.setAttribute('id','page');
         document.body.appendChild(section);
-        return section;
+        
     };
     const headerElement = ()=>{
         const header = createElement('header');
-        appendElement(sectionElement,header);
+        const title = createElement('h1');
+        title.textContent = 'The Paths';
+        section.appendChild(header);
+        header.appendChild(title);
         
     };
     const navElement = ()=>{
         const nav = createElement('nav');
-        p
+        const buttonContainer = createElement('div');
+        const homeButton = createElement('button');
+        const menuButton = createElement('button');
+        const contactButton = createElement('button');
+        buttonContainer.classList.add('button-container');
+        homeButton.textContent = 'Home';
+        menuButton.textContent = 'Menu';
+        contactButton.textContent = 'Contact';
+        section.appendChild(nav);
+        nav.appendChild(buttonContainer);
+        buttonContainer.appendChild(homeButton);
+        buttonContainer.appendChild(menuButton);
+        buttonContainer.appendChild(contactButton);
     };
     const mainElement = ()=>{
         const main = createElement('main');
-        appendElement(section)
+        section.appendChild(main);
        
     };
     const footerElement = ()=>{
         const footer = createElement('footer');
-        appendElement(section,footer);
+        
+        section.appendChild(footer);
     };
     function renderPage(){
         sectionElement();
@@ -53,13 +69,11 @@ const homePage = (() => {
     function createElement(element){
         return document.createElement(element);
     };
-    function appendElement(target,element){
-        document.target.appendChild(element);
-    }
+
     
 
     return{ renderPage };
 
 })();
-console.log(homePage)
-console.log(homePage())
+
+homePage.renderPage()
