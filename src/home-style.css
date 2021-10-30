@@ -6,28 +6,35 @@
   grid-template-areas: "head head"
                        "nav  main"
                        "foot  foot";
-  grid-template-rows: 50px 1fr 30px;
+  grid-template-rows: 100px 1fr 30px;
   grid-template-columns: 100px 1fr;
 }
   
-  #page > header {
+#page > header {
   grid-area: head;
-  background-color: #8ca0ff;
+  background-color: rgb(5 29 40 / 80%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 60px;
+  color: azure; 
 }
   
-  #page > nav {
+#page > nav {
   grid-area: nav;
-  background-color: #ffa08c;
+  background-color: rgb(5 29 40 / 80%);
+  
 }
 
   #page > main {
   grid-area: main;
-  background-color: #ffff64;
+
 }
 
   #page > footer {
   grid-area: foot;
-  background-color: #8cffa0;
+  background-color: rgb(5 29 40 / 80%);
+  color: azure; 
 }
 
 .button-container{
@@ -39,7 +46,7 @@
                        "contact";
   grid-template-rows: 1fr 1fr 1fr;
   grid-template-columns: 1fr;
-  border-right: 3px solid black;
+  border-right: 3px solid beige;
 }
 
 .button-container > button {
@@ -48,7 +55,15 @@
   justify-self: center;
   background: none;
   border: none;
-  border-bottom: 6px solid beige;
   font-size: x-large;
   padding: 23%;
+  color: azure;
+}
+.button-container > button:hover{
+border-bottom: 6px solid beige;
+transition: all 250ms ease;
+cursor: pointer;
+}
+.button-container > button:focus{
+  border-bottom: 6px solid rgb(199, 199, 11);
 }

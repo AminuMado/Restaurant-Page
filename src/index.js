@@ -14,6 +14,7 @@ render()
  */
 import './style.css';
 import './home-style.css';
+import gitLogo from '../src/RestaurantImages/github-logo.svg'
 
 // import { homePage } from "./home";
 const homePage = (() => {
@@ -56,8 +57,19 @@ const homePage = (() => {
     };
     const footerElement = ()=>{
         const footer = createElement('footer');
-        
+        const paragraph = createElement('p');
+        const link = createElement('a');
+        const logo = createElement('img');
+        paragraph.textContent = 'Copyright © 2021 AminuMado';
+        link.href = 'https://github.com/AminuMado';
+        link.target = 'blank';
+        logo.src = gitLogo;
+        link.appendChild(logo);
+        footer.appendChild(paragraph);
+        footer.appendChild(link);
         section.appendChild(footer);
+        footer.classList.add('footer')
+        logo.classList.add('github-logo')
     };
     function renderPage(){
         sectionElement();
