@@ -14,6 +14,7 @@ render()
  */
 import './style.css';
 import './home-style.css';
+import './menu.css';
 import gitLogo from '../src/RestaurantImages/github-logo.svg'
 
 // import { homePage } from "./home";
@@ -52,6 +53,17 @@ const homePage = (() => {
     };
     const mainElement = ()=>{
         const main = createElement('main');
+        const card = createElement('div');
+        const price = createElement('p');
+        const placeHolder = createElement('div');
+        const seperator = createElement("seperator");
+        const description = createElement('div');
+        const foodName = createElement('h2');
+        const ingredients = createElement('p');
+
+        seperator.classList.add("seperator");
+        card.classList.add('card-container');
+        placeHolder.classList.add('logo-placeholder');
         section.appendChild(main);
        
     };
