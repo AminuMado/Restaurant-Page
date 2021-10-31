@@ -16,6 +16,7 @@ import './style.css';
 import './home-style.css';
 import './menu.css';
 import gitLogo from '../src/RestaurantImages/github-logo.svg'
+import ramen1 from '../src/RestaurantImages/ramen-1.png'
 
 // import { homePage } from "./home";
 const homePage = (() => {
@@ -56,6 +57,7 @@ const homePage = (() => {
         const card = createElement('div');
         const price = createElement('p');
         const placeHolder = createElement('div');
+        const photo = createElement('img');
         const seperator = createElement("seperator");
         const description = createElement('div');
         const foodName = createElement('h2');
@@ -65,6 +67,20 @@ const homePage = (() => {
         card.classList.add('card-container');
         placeHolder.classList.add('logo-placeholder');
         section.appendChild(main);
+        photo.src = ramen1;
+
+        price.textContent = '$20';
+        foodName.textContent = 'Ramen'
+        ingredients.textContent = 'scallions, meat, egg, and good shit'
+        // append elements
+        main.appendChild(card);
+        card.appendChild(price);
+        card.appendChild(placeHolder);
+        placeHolder.appendChild(photo);
+        card.appendChild(seperator);
+        card.appendChild(description);
+        description.appendChild(foodName);
+        description.appendChild(ingredients);
        
     };
     const footerElement = ()=>{
