@@ -17,6 +17,24 @@ import './home-style.css';
 import './menu.css';
 import gitLogo from '../src/RestaurantImages/github-logo.svg'
 import ramen1 from '../src/RestaurantImages/ramen-1.png'
+import ramen2 from '../src/RestaurantImages/ramen-2.png'
+import ramen3 from '../src/RestaurantImages/ramen-3.png'
+import ramen4 from '../src/RestaurantImages/ramen-4.png'
+import ramen5 from '../src/RestaurantImages/ramen-5.png'
+import ramen6 from '../src/RestaurantImages/ramen-6.png'
+import ramen7 from '../src/RestaurantImages/ramen-7.png'
+import salad1 from '../src/RestaurantImages/salad-1.png'
+import salad2 from '../src/RestaurantImages/salad-2.png'
+import salad3 from '../src/RestaurantImages/salad-3.png'
+import salad4 from '../src/RestaurantImages/salad-4.png'
+import salad5 from '../src/RestaurantImages/salad-5.png'
+import pasta1 from '../src/RestaurantImages/pasta-1.png'
+import pasta2 from '../src/RestaurantImages/pasta-2.png'
+import pasta3 from '../src/RestaurantImages/pasta-3.png'
+import pasta4 from '../src/RestaurantImages/pasta-4.png'
+import pasta5 from '../src/RestaurantImages/pasta-5.png'
+import pasta6 from '../src/RestaurantImages/pasta-6.png'
+import pasta7 from '../src/RestaurantImages/pasta-7.png'
 
 // import { homePage } from "./home";
 const homePage = (() => {
@@ -62,7 +80,36 @@ const homePage = (() => {
         const description = createElement('div');
         const foodName = createElement('h2');
         const ingredients = createElement('p');
-
+        const menuItemsRamen =[{
+            name: 'Chicken Ramen',
+            src: ramen1,
+            ingredients: 'chicken broth: chicken chashu, wood ear mushrooms,fried onion, grated cheese » served with thin noodles.',
+            price: '$15'
+        },
+        {
+            name: 'Shrimp Ramen',
+            src: ramen2,
+            ingredients: 'shrimp broth: shrimps, cilantro, lime and chilli sauce, grated garlic, scallions.',
+            price: '$18'
+        },
+        {
+            name: 'Shio Black',
+            src: ramen3,
+            ingredients: 'shio broth: black garlic oil, kikurage mushrooms, sesame, scallions.',
+            price: '$17'
+        },
+        {
+            name: 'Spicy Chicken Ramen',
+            src: ramen4,
+            ingredients: 'chicken broth: chilli sauce, chicken chashu, tatsu egg, green onion » served with thin noodles',
+            price: '$19'
+        },
+        {
+            name: 'Beef Ramen',
+            src: ramen5,
+            ingredients: 'beef broth: beef chunks, lime, cilantro, red pepper, onions » served with thin noodles',
+            price: '$13'
+        }]
         seperator.classList.add("seperator");
         card.classList.add('card-container');
         placeHolder.classList.add('logo-placeholder');

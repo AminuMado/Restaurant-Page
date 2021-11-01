@@ -28,7 +28,7 @@
 
   #page > main {
   grid-area: main;
-
+background-color: lavender;
 }
 
   #page > footer {
