@@ -68,8 +68,13 @@ const homePage = (() => {
     };
     const mainElement = ()=>{
         const main = createElement('main');
+        const buttonContainer = createElement('div');
+        const ramenButton = createElement('button');
+        const saladButton = createElement('button');
+        const pastaButton = createElement('button');
         section.appendChild(main);
         function renderMenu(menu){
+            
             menu.forEach(item => {
                 menu[item] = createMenuCard();
                 appendCardElements(menu[item]);
@@ -78,6 +83,21 @@ const homePage = (() => {
             });
             
         };
+        function setButtonAttributes(){
+            buttonContainer.classList.add('menu-button-container');
+            ramenButton.classList.add('menu-button');
+            pastaButton.classList.add('menu-button');
+            saladButton.classList.add('menu-button');
+            ramenButton.textContent = 'Ramen';
+            pastaButton.textContent = 'Pasta';
+            saladButton.textContent = 'Salad'
+        }
+        function appendMenuButton(){
+            main.appendChild(buttonContainer);
+            buttonContainer.appendChild(ramenButton);
+            buttonContainer.appendChild(pastaButton);
+            buttonContainer.appendChild(saladButton);
+        }
         function createMenuCard (){
             const card = createElement('div');
             const name = createElement('h2');
@@ -204,9 +224,10 @@ const homePage = (() => {
 
 
         // append elements
-        renderMenu(menuItemsRamen);
-        renderMenu(menuItemsPasta);
-        renderMenu(menuItemsSalad)
+        appendMenuButton();
+        setButtonAttributes();
+        // renderMenu(menuItemsRamen);
+        
     };
     const footerElement = ()=>{
         const footer = createElement('footer');
