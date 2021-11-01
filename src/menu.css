@@ -16,14 +16,14 @@
     transform: translate(4px,-4px);
 
 }
-.card-container > .logo-placeholder{
+.placeholder{
     color: azure;
     grid-area: placeholder;
     width: 200px;
     height: 200px;
     border-radius: 50%;
 }
-.logo-placeholder >img{
+.placeholder >img{
     width: inherit;
     height: inherit;
 
