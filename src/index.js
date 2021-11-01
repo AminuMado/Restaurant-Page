@@ -21,8 +21,6 @@ import ramen2 from '../src/RestaurantImages/ramen-2.png'
 import ramen3 from '../src/RestaurantImages/ramen-3.png'
 import ramen4 from '../src/RestaurantImages/ramen-4.png'
 import ramen5 from '../src/RestaurantImages/ramen-5.png'
-import ramen6 from '../src/RestaurantImages/ramen-6.png'
-import ramen7 from '../src/RestaurantImages/ramen-7.png'
 import salad1 from '../src/RestaurantImages/salad-1.png'
 import salad2 from '../src/RestaurantImages/salad-2.png'
 import salad3 from '../src/RestaurantImages/salad-3.png'
@@ -109,7 +107,32 @@ const homePage = (() => {
             src: ramen5,
             ingredients: 'beef broth: beef chunks, lime, cilantro, red pepper, onions » served with thin noodles',
             price: '$13'
-        }]
+        }];
+
+        const menuItemsSalad =[{
+            name: 'Classic Spinach',
+            src: salad1,
+            ingredients: 'Baby Spinach and Crouton',
+            price: '$5'
+        },
+        {
+            name: 'Greek Salmon',
+            src: salad2,
+            ingredients: 'Salmon, Romaine Lettuce, Cucumber, Crouton',
+            price: '$8'
+        },
+        {
+            name: 'Kale Caesar',
+            src: salad3,
+            ingredients: 'Kale, Roasted Chicken, Cheese, Grape Tomatoes, Croutons, Caesar Dressing',
+            price: '$9'
+        },
+        {
+            name: 'Chicken Ceasar',
+            src: salad4,
+            ingredients: 'Kale, Romaine, Roasted Chicken, Avocado, Shaved Parmesan, Caesar Dressing',
+            price: '$10'
+        }];
         seperator.classList.add("seperator");
         card.classList.add('card-container');
         placeHolder.classList.add('logo-placeholder');
