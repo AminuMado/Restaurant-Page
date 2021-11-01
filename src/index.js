@@ -25,7 +25,6 @@ import salad1 from '../src/RestaurantImages/salad-1.png'
 import salad2 from '../src/RestaurantImages/salad-2.png'
 import salad3 from '../src/RestaurantImages/salad-3.png'
 import salad4 from '../src/RestaurantImages/salad-4.png'
-import salad5 from '../src/RestaurantImages/salad-5.png'
 import pasta1 from '../src/RestaurantImages/pasta-1.png'
 import pasta2 from '../src/RestaurantImages/pasta-2.png'
 import pasta3 from '../src/RestaurantImages/pasta-3.png'
@@ -132,6 +131,48 @@ const homePage = (() => {
             src: salad4,
             ingredients: 'Kale, Romaine, Roasted Chicken, Avocado, Shaved Parmesan, Caesar Dressing',
             price: '$10'
+        }];
+        const menuItemsPasta =[{
+            name: 'Brocolli',
+            src: pasta1,
+            ingredients: 'Spaghetti, Brocolli, Sesame, Ground Beef',
+            price: '$12'
+        },
+        {
+            name: 'Parmesian',
+            src: pasta2,
+            ingredients: 'Spaghetti, Parmesian, Chicken Strips',
+            price: '$13'
+        },
+        {
+            name: 'Grape Tomato',
+            src: pasta3,
+            ingredients: 'Spaghetti, Grape Tomato, Shaved Parmesian',
+            price: '$19'
+        },
+        {
+            name: 'Classic',
+            src: pasta4,
+            ingredients: 'Spaghetti, Tomato Sauce',
+            price: '$10'
+        },
+        {
+            name: 'Meatball',
+            src: pasta5,
+            ingredients: 'Spaghetti, Meatball, Tomato Sauce',
+            price: '$18'
+        },
+        {
+            name: 'Sausage',
+            src: pasta6,
+            ingredients: 'Spaghetti, Sausage Strips',
+            price: '$16'
+        },
+        {
+            name: 'Clam',
+            src: pasta6,
+            ingredients: 'Spaghetti, Small Clams',
+            price: '$22'
         }];
         seperator.classList.add("seperator");
         card.classList.add('card-container');
