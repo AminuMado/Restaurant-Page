@@ -21,7 +21,6 @@ import ramen2 from '../src/RestaurantImages/ramen-2.png'
 import ramen3 from '../src/RestaurantImages/ramen-3.png'
 import ramen4 from '../src/RestaurantImages/ramen-4.png'
 import ramen5 from '../src/RestaurantImages/ramen-5.png'
-import salad1 from '../src/RestaurantImages/salad-1.png'
 import salad2 from '../src/RestaurantImages/salad-2.png'
 import salad3 from '../src/RestaurantImages/salad-3.png'
 import salad4 from '../src/RestaurantImages/salad-4.png'
@@ -69,14 +68,47 @@ const homePage = (() => {
     };
     const mainElement = ()=>{
         const main = createElement('main');
-        const card = createElement('div');
-        const price = createElement('p');
-        const placeHolder = createElement('div');
-        const photo = createElement('img');
-        const seperator = createElement("seperator");
-        const description = createElement('div');
-        const foodName = createElement('h2');
-        const ingredients = createElement('p');
+        section.appendChild(main);
+        function renderMenu(menu){
+            menu.forEach(item => {
+                menu[item] = createMenuCard();
+                appendCardElements(menu[item]);
+                setCardDetails(menu[item],item);
+                setCardStyles(menu[item]);
+            });
+            
+        };
+        function createMenuCard (){
+            const card = createElement('div');
+            const name = createElement('h2');
+            const price = createElement('p');
+            const photo = createElement('img');
+            const seperator = createElement("seperator");
+            const ingredients = createElement('p');
+            const placeHolder = createElement('div');
+            return {card,name,price,photo,seperator,placeHolder,ingredients};
+         };
+         function appendCardElements(target){
+            main.appendChild(target.card);
+            target.placeHolder.appendChild(target.photo);
+            target.card.appendChild(target.price);
+            target.card.appendChild(target.placeHolder);
+            target.card.appendChild(target.seperator);
+            target.card.appendChild(target.name);
+            target.card.appendChild(target.ingredients);
+         };
+         function setCardStyles(target){
+            target.card.classList.add('card-container');
+            target.placeHolder.classList.add('placeholder');
+            target.seperator.classList.add('seperator');
+         }
+         function setCardDetails(menuItem, item){
+            menuItem.photo.src = item.src;
+            menuItem.name.innerText = item.name;
+            menuItem.price.innerText = item.price;
+            menuItem.ingredients.innerText = item.ingredients;
+         };
+
         const menuItemsRamen =[{
             name: 'Chicken Ramen',
             src: ramen1,
@@ -109,12 +141,6 @@ const homePage = (() => {
         }];
 
         const menuItemsSalad =[{
-            name: 'Classic Spinach',
-            src: salad1,
-            ingredients: 'Baby Spinach and Crouton',
-            price: '$5'
-        },
-        {
             name: 'Greek Salmon',
             src: salad2,
             ingredients: 'Salmon, Romaine Lettuce, Cucumber, Crouton',
@@ -132,6 +158,7 @@ const homePage = (() => {
             ingredients: 'Kale, Romaine, Roasted Chicken, Avocado, Shaved Parmesan, Caesar Dressing',
             price: '$10'
         }];
+
         const menuItemsPasta =[{
             name: 'Brocolli',
             src: pasta1,
@@ -170,29 +197,16 @@ const homePage = (() => {
         },
         {
             name: 'Clam',
-            src: pasta6,
+            src: pasta7,
             ingredients: 'Spaghetti, Small Clams',
             price: '$22'
         }];
-        seperator.classList.add("seperator");
-        card.classList.add('card-container');
-        placeHolder.classList.add('logo-placeholder');
-        section.appendChild(main);
-        photo.src = ramen1;
 
-        price.textContent = '$20';
-        foodName.textContent = 'Ramen'
-        ingredients.textContent = 'scallions, meat, egg, and good shit'
+
         // append elements
-        main.appendChild(card);
-        card.appendChild(price);
-        card.appendChild(placeHolder);
-        placeHolder.appendChild(photo);
-        card.appendChild(seperator);
-        card.appendChild(description);
-        description.appendChild(foodName);
-        description.appendChild(ingredients);
-       
+        renderMenu(menuItemsRamen);
+        renderMenu(menuItemsPasta);
+        renderMenu(menuItemsSalad)
     };
     const footerElement = ()=>{
         const footer = createElement('footer');
