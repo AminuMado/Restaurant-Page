@@ -1,7 +1,9 @@
 import './style.css'
 import './home-style.css'
 import gitIcon from '../src/RestaurantImages/github-logo.svg'
-import home from "./home"
+import home from './home'
+import menu from './menu'
+import contact from './contact'
 
 const render = (() => {
 
@@ -65,14 +67,19 @@ const render = (() => {
         }
     
         document.addEventListener('click', (event) => {
-          removeCurrentClass();
           if (event.target.id === 'Home'){
+            removeCurrentClass();
+            content.textContent = '';
             home.render();
             menuItemHome.classList.add('current');
           } else if (event.target.id === 'Menu'){
+            removeCurrentClass();
+            content.textContent = '';
             menu.render();
             menuItemMenu.classList.add('current');
           } else if (event.target.id === 'Contact'){
+            removeCurrentClass();
+            content.textContent = '';
             contact.render();
             menuItemContacts.classList.add('current');
           };
