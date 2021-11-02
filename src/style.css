@@ -10,6 +10,16 @@
 }
 
 body{
+    display: grid;
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    grid-template-areas:"header"
+                        "nav"
+                        "content"
+                        "footer";
+  grid-template-rows: 100px 100px 1fr 30px ;
+  grid-template-columns: 1fr;
     background-image: url(../src/RestaurantImages/wallpaper-7.jpg) ;
     -webkit-background-size: cover;
     -moz-background-size:cover;
@@ -18,7 +28,17 @@ body{
     background-repeat:   no-repeat;
     background-position: center center;    
 }
+#header{
+    grid-area: header;
+}
+#nav{
+    grid-area: nav;
+}
+#content{
+    grid-area: content;
+}
 .footer{
+    grid-area: footer;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -40,5 +60,19 @@ body{
         transform: rotate(360deg) scale(1.3);
         box-shadow: 0px 0px 5px crimson;
         filter: invert(36%) sepia(68%) saturate(1441%) hue-rotate(332deg) brightness(63%) contrast(120%);
+
+}
+/* Home Page*/
+#about {
+    margin-top: 150px;
+    font-size: 30px;
+}
+#about h1 {
+    margin: 0;
+    padding: 30px 15px;
+    font-size: 35px;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    text-align: center;
 
 }
