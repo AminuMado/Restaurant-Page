@@ -1,4 +1,5 @@
 import './style.css'
+import './home-style.css'
 import gitIcon from '../src/RestaurantImages/github-logo.svg'
 import home from "./home"
 
