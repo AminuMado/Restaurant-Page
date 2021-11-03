@@ -1,5 +1,4 @@
 
-import './home-style.css';
 
 const home = (() => {
     function render(){
