@@ -31,7 +31,7 @@ const render = (() => {
           nav.appendChild(navItem);
         }
     };
-// }
+
     function renderContent(){
         const section = document.createElement('section');
         section.setAttribute('id','content');
@@ -91,6 +91,7 @@ const render = (() => {
         renderContent();
         renderFooter();
         buttonsHandler();
+        home.render();
     };
     return {start}
   })();
