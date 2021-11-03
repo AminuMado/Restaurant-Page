@@ -3,12 +3,8 @@ const contact = (() => {
         const content = document.querySelector('#content');
         const aboutDiv = document.createElement('div');
         const aboutTxt = document.createElement('h1');
-        aboutDiv.setAttribute('id', 'contact');
-    
-        // TEXT NODES
         const text1 = document.createTextNode('Paradis Island');
-    
-        // APPENDS
+        aboutDiv.setAttribute('id', 'about');
         aboutTxt.appendChild(text1);
         aboutDiv.appendChild(aboutTxt);
         content.appendChild(aboutDiv);
