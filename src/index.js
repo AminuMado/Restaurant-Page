@@ -81,7 +81,7 @@ const render = (() => {
             content.textContent = '';
             contact.render();
             menuItemContacts.classList.add('current');
-          };
+          }else return;
     });
 }
     function start(){
