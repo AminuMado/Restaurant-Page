@@ -11,7 +11,7 @@ const render = (() => {
       const header = document.createElement('div');
       const title = document.createElement('h1');
       header.setAttribute('id','header');
-      title.textContent = 'Lights';
+      title.textContent = 'The Rumbling';
     //   Appends
       document.body.appendChild(header);
       header.appendChild(title);
