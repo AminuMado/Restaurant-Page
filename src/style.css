@@ -20,7 +20,7 @@ body{
                         "footer";
   grid-template-rows: 100px 100px 1fr 30px ;
   grid-template-columns: 1fr;
-    background-image: url(../src/RestaurantImages/wallpaper-7.jpg) ;
+    /* background-image: url(../src/RestaurantImages/wallpaper-7.jpg) ; */
     -webkit-background-size: cover;
     -moz-background-size:cover;
     -o-background-size:  cover;
@@ -29,14 +29,84 @@ body{
     background-position: center center;    
 }
 #header{
-    grid-area: header;
+  grid-area: header;
 }
 #nav{
-    grid-area: nav;
+  grid-area: nav;
 }
 #content{
-    grid-area: content;
+  grid-area: content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 160px;
 }
+/* Menu */
+#pastaContainer,#ramenContainer,#saladContainer{
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+ 
+}
+#pastaContainer > h1{
+  margin: 0;
+  padding: 30px 15px;
+  font-size: 50px;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  text-align: center;
+  width: 96%;
+}
+#ramenContainer > h1{
+  margin: 0;
+  padding: 30px 15px;
+  font-size: 50px;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  text-align: center;
+  width: 93%; 
+}
+#saladContainer > h1{
+  margin: 0;
+  padding: 30px 15px;
+  font-size: 40px;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  text-align: center;
+  width:90%;
+}
+.card-container{
+  background:silver;
+  display: flex;
+  flex-direction: column;
+  width: 275px;
+  height: auto;
+  align-items: center;
+  -webkit-transition: box-shadow 200ms ease,-webkit-transform 200ms ease;
+  transition: box-shadow 200ms ease,transform 200ms ease;
+  box-shadow: 0px 0px 0 black;
+  gap: 10px;
+  padding:10px;
+
+}
+.card-container:hover{
+  box-shadow: -8px 8px 0px 0px black;
+  transform: translate(4px,-4px);
+
+}
+.placeholder{
+  color: azure;
+  grid-area: placeholder;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+.placeholder > img{
+  width: inherit;
+  height: inherit;
+}
+/* Footer */
 .footer{
     grid-area: footer;
     display: flex;
@@ -45,7 +115,7 @@ body{
     gap: 6.5px;
     width: 97%;
     padding: 10px;
-    font-size: 35px;
+    font-size: 25px;
     margin-top: auto;
 }
 .github-logo{
@@ -76,3 +146,15 @@ body{
     text-align: center;
 
 }
+/* MENU */
+#menu,
+#contact {
+  margin: 0 325px;
+  background: rgba(0, 0, 0, 0.8);
+  border: 3px solid var(--pink);
+  border-radius: 2px;
+}
+h2 {
+  font-size: 30px;
+}
+
